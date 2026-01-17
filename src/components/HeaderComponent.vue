@@ -1,20 +1,20 @@
 <script setup>
+
+  const props = defineProps({
+    state: Boolean
+  });
   
+  const emits = defineEmits(["show"]);
+
+  const showNavMenu = () => {
+    emits("show", !props.state);
+  }
+
 </script>
 
 <template>
   <header>
-    <select>
-      <option>
-        ---
-      </option>
-      <option>
-        <a href="/cars">Nuestro catálogo</a>
-      </option>
-      <option>
-        <a href="/formulary">Unete a nosotros</a>
-      </option>
-    </select>
+    <button @click="showNavMenu">☰</button>
     <img id="logo" src="../../public/autoRush (1).png">
     <div>
       <button>
@@ -33,6 +33,13 @@
     border-radius: 5px;
     height: 25px;
     width: 45px;
+  }
+
+  button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 1px white solid
   }
 
 </style>
