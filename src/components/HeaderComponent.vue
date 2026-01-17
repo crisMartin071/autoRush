@@ -1,5 +1,5 @@
 <script setup>
-
+  
 </script>
 
 <template>
@@ -9,10 +9,10 @@
         ---
       </option>
       <option>
-        <a>Nuestro catálogo</a>
+        <a href="/cars">Nuestro catálogo</a>
       </option>
       <option>
-        <a>Unete a nosotros</a>
+        <a href="/formulary">Unete a nosotros</a>
       </option>
     </select>
     <img id="logo" src="../../public/autoRush (1).png">

@@ -9,10 +9,14 @@ const i18n = createI18n({
     fallbackLocale: "en",
     messages: {
         "es": {
-            greet: "Bienvenido a AutoRush!"
+            greet: "Bienvenido a AutoRush!",
+            catalog: "Conoce nuestro catálogo",
+            adviser: "Unete a nosotros"
         },
         "en": {
-            greet: "Welcome to AutoRush!"
+            greet: "Welcome to AutoRush!",
+            catalog: "Know all of us catalog",
+            adviser: "Join us"
         }
     }
 })

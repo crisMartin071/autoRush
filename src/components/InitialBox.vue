@@ -3,14 +3,19 @@ import { useI18n } from "vue-i18n";
 //Cambiar y hacer que herede del padre
 const { t } = useI18n();
 
+const props = defineProps({
+    title: String,
+    img: String
+});
+
 </script>
 
 <template>
     <div class="backgroundPicture">
-        <img src="../../public/sport-car-with-black-white-autotuning-driving-forest.jpg">
+        <img :src="'../../public/'+ props.img">
         <div class="overlay"></div>
         <div class="texto">
-            <h1>{{ t("greet") }}</h1>
+            <h1>{{ t(props.title) }}</h1>
             <p>- -</p>
         </div>
     </div>

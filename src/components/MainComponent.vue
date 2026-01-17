@@ -1,12 +1,11 @@
 <script setup>
 import InitialBox from './InitialBox.vue';
 
-
 </script>
 
 <template>
     <main>
-        <InitialBox></InitialBox>
+        <InitialBox title="greet" img="sport-car.jpg"></InitialBox>
     </main>
 </template>
 
