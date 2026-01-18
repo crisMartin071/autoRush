@@ -1,4 +1,6 @@
 <script setup>
+    
+import BrandsTable from './BrandsTable.vue';
 import InitialBox from './InitialBox.vue';
 import NavMenu from './navMenu.vue';
 
@@ -12,6 +14,7 @@ const props = defineProps({
     <main>
         <NavMenu v-if="isOpen"></NavMenu>
         <InitialBox title="greet" img="sport-car.jpg"></InitialBox>
+        <BrandsTable></BrandsTable>
     </main>
 </template>
 

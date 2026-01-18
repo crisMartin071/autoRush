@@ -1,4 +1,9 @@
 <script setup>
+  import { ref } from "vue";
+  import { useI18n } from "vue-i18n";
+  
+  const { locale } = useI18n();
+  const lang = ref(locale.value);
 
   const props = defineProps({
     state: Boolean
@@ -8,6 +13,11 @@
 
   const showNavMenu = () => {
     emits("show", !props.state);
+  };
+
+  const changeLanguage = (language) => {
+    locale.value = language;
+    lang.value = locale.value;
   }
 
 </script>
@@ -17,8 +27,11 @@
     <button @click="showNavMenu">☰</button>
     <img id="logo" src="../../public/img/autoRush (1).png">
     <div>
-      <button>
-        <img>
+      <button v-if="lang == 'es'" @click="changeLanguage('en')">
+        eeeee
+      </button>
+      <button v-else @click="changeLanguage('es')">
+        aaaaa
       </button>
     </div>
   </header>

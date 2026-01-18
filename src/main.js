@@ -3,6 +3,8 @@ import './style.css';
 import App from './App.vue';
 import router from '../router';
 import { createI18n } from "vue-i18n";
+import VueGoodTablePlugin from "vue-good-table-next";
+import "vue-good-table-next/dist/vue-good-table-next.css";
 
 const i18n = createI18n({
     locale: "es",
@@ -21,4 +23,4 @@ const i18n = createI18n({
     }
 })
 
-createApp(App).use(router).use(i18n).mount('#app')
+createApp(App).use(router).use(i18n).use(VueGoodTablePlugin).mount('#app')

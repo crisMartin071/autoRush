@@ -1,7 +1,4 @@
 <script setup>
-import { useI18n } from "vue-i18n";
-//Cambiar y hacer que herede del padre
-const { t } = useI18n();
 
 const props = defineProps({
     title: String,
@@ -15,7 +12,7 @@ const props = defineProps({
         <img :src="'../../public/img/'+ props.img">
         <div class="overlay"></div>
         <div class="texto">
-            <h1>{{ t(props.title) }}</h1>
+            <h1>{{ $t(props.title) }}</h1>
             <p>- -</p>
         </div>
     </div>
