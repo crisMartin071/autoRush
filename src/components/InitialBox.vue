@@ -12,7 +12,7 @@ const props = defineProps({
 
 <template>
     <div class="backgroundPicture">
-        <img :src="'../../public/'+ props.img">
+        <img :src="'../../public/img/'+ props.img">
         <div class="overlay"></div>
         <div class="texto">
             <h1>{{ t(props.title) }}</h1>

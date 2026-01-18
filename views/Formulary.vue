@@ -2,12 +2,18 @@
 import FooterComponent from '../src/components/FooterComponent.vue';
 import HeaderComponent from '../src/components/HeaderComponent.vue';
 import MainComponentJoin from '../src/components/MainComponentJoin.vue';
+import { ref } from "vue";
 
+const isOpen = ref(false);
+
+const toggleButton = (event) => {
+    isOpen.value = event;
+}
 
 </script>
 
 <template>
-    <HeaderComponent></HeaderComponent>
-    <MainComponentJoin></MainComponentJoin>
+    <HeaderComponent @show="toggleButton" :state="isOpen"></HeaderComponent>
+    <MainComponentJoin :isOpen="isOpen"></MainComponentJoin>
     <FooterComponent></FooterComponent>
 </template>

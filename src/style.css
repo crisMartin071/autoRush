@@ -32,4 +32,16 @@ a{
     text-decoration: none;
     color: white
 }
-  
+
+main{
+    background-color: rgb(15, 17, 21);
+    padding-bottom: 50px;
+}
+
+h1{
+    color: white;
+}
+
+p{
+    color: rgb(180, 180, 180);
+}

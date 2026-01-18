@@ -4,7 +4,7 @@
 
 <template>
     <footer>
-        <img id="logo" src="../../public/autoRush (1).png">
+        <img id="logo" src="../../public/img/autoRush (1).png">
         <div class="contentFooter">
             <div>
                 <h4>Mapa web</h4>
@@ -43,11 +43,11 @@
         </div>
         <hr>
         <div class="sponsors">
-            <img>
-            <img>
-            <img>
-            <img>
-            <img>
+            <img src="../../public/img/audi.jpg">
+            <img src="../../public/img/bmw.jpg">
+            <img src="../../public/img/">
+            <img src="../../public/img/">
+            <img src="../../public/img/">
         </div>
     </footer>
 </template>
@@ -87,8 +87,8 @@
     }
 
     .sponsors img{
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 
 </style>

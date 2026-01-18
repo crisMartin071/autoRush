@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "BMW Serie 3",
+    "description": "Deportivo premium manejo excepcional.",
+    "img": "bmw_serie3"
+  },
+  {
+    "id": 2,
+    "name": "Mercedes Clase C",
+    "description": "Sedán elegante con tecnología punta.",
+    "img": "mercedes_clasec"
+  },
+  {
+    "id": 3,
+    "name": "Audi A4",
+    "description": "Tracción quattro diseño sofisticado.",
+    "img": "audi_a4"
+  },
+  {
+    "id": 4,
+    "name": "Volkswagen Arteon",
+    "description": "Sedán coupé elegante espacioso.",
+    "img": "volkswagen_arteon"
+  },
+  {
+    "id": 5,
+    "name": "Lexus NX",
+    "description": "SUV premium japonés silencioso.",
+    "img": "lexus_nx"
+  },
+  {
+    "id": 6,
+    "name": "Volvo XC60",
+    "description": "SUV sueco seguro premium familiar.",
+    "img": "volvo_xc60"
+  },
+  {
+    "id": 7,
+    "name": "Genesis GV70",
+    "description": "SUV coreano lujo buen precio.",
+    "img": "genesis_gv70"
+  },
+  {
+    "id": 8,
+    "name": "Alfa Romeo Stelvio",
+    "description": "SUV italiano alma deportiva.",
+    "img": "alfa_romeo_stelvio"
+  },
+  {
+    "id": 9,
+    "name": "Cupra Formentor",
+    "description": "SUV coupé español deportivo.",
+    "img": "cupra_formentor"
+  },
+  {
+    "id": 10,
+    "name": "Skoda Octavia RS",
+    "description": "Familiar deportivo 245CV potente.",
+    "img": "skoda_octavia_rs"
+  },
+  {
+    "id": 11,
+    "name": "Mazda CX-5",
+    "description": "SUV japonés premium manejo puro.",
+    "img": "mazda_cx5"
+  },
+  {
+    "id": 12,
+    "name": "DS 7 Crossback",
+    "description": "SUV francés chic tecnológico.",
+    "img": "ds7_crossback"
+  },
+  {
+    "id": 13,
+    "name": "Jaguar F-Pace",
+    "description": "SUV británico deportivo elegante.",
+    "img": "jaguar_fpace"
+  },
+  {
+    "id": 14,
+    "name": "Porsche Macan",
+    "description": "SUV compacto deportivo premium.",
+    "img": "porsche_macan"
+  },
+  {
+    "id": 15,
+    "name": "Tesla Model Y",
+    "description": "SUV eléctrico familiar rápido.",
+    "img": "tesla_modely"
+  },
+  {
+    "id": 16,
+    "name": "Infiniti QX50",
+    "description": "SUV japonés premium variable.",
+    "img": "infiniti_qx50"
+  },
+  {
+    "id": 17,
+    "name": "Acura RDX",
+    "description": "SUV japonés deportivo americano.",
+    "img": "acura_rdx"
+  },
+  {
+    "id": 18,
+    "name": "Alfa Romeo Giulia",
+    "description": "Sedán italiano tracción trasera.",
+    "img": "alfa_romeo_giulia"
+  },
+  {
+    "id": 19,
+    "name": "BMW X3",
+    "description": "SUV deportivo premium versátil.",
+    "img": "bmw_x3"
+  },
+  {
+    "id": 20,
+    "name": "Audi Q5",
+    "description": "SUV premium equilibrado tecnológico.",
+    "img": "audi_q5"
+  }
+]

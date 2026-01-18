@@ -15,7 +15,7 @@
 <template>
   <header>
     <button @click="showNavMenu">☰</button>
-    <img id="logo" src="../../public/autoRush (1).png">
+    <img id="logo" src="../../public/img/autoRush (1).png">
     <div>
       <button>
         <img>
