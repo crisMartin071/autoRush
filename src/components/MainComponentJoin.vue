@@ -2,6 +2,16 @@
 import InitialBox from './InitialBox.vue';
 import NavMenu from './navMenu.vue';
 import { useForm, useField } from "vee-validate";
+import { Bar } from 'vue-chartjs';
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
+} from 'chart.js';
 
 const schema = {
     name(value){
@@ -37,6 +47,31 @@ const props = defineProps({
     isOpen: Boolean
 });
 
+ChartJS.register(
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
+);
+
+const chartData = {
+  labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
+  datasets: [
+    {
+      label: 'Ventas',
+      data: [40, 20, 12, 39],
+      backgroundColor: '#42b983'
+    }
+  ]
+};
+
+const chartOptions = {
+  responsive: true,
+  maintainAspectRatio: false
+};
+
 </script>
 
 <template>
@@ -60,6 +95,9 @@ const props = defineProps({
                 <input type="text">
                 <input type="submit" value="Enviar">
             </form>
+        </div>
+        <div>
+            <Bar :data="chartData" :options="chartOptions" />
         </div>
     </main>
 </template>
