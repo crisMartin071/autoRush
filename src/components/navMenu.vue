@@ -25,9 +25,10 @@
         background-color: rgba(0, 0, 0, 0.7);
         width: 30%;
         position: absolute;
-        top: 98px;
+        top: 120px;
         z-index: 2;
         border-bottom-right-radius: 7px;
+        
     }
 
     a{
@@ -36,5 +37,6 @@
 
     li{
         list-style: none;
+        margin: 4px;
     }
 </style>

@@ -14,7 +14,10 @@ const props = defineProps({
     <main>
         <NavMenu v-if="isOpen"></NavMenu>
         <InitialBox title="greet" img="sport-car.jpg"></InitialBox>
-        <BrandsTable></BrandsTable>
+        <div class="brandsUsed">
+            <h1>Marcas con las que trabajamos</h1>
+            <BrandsTable></BrandsTable>
+        </div>
     </main>
 </template>
 
@@ -22,5 +25,12 @@ const props = defineProps({
     main{
         display: flex;
         flex-direction: column;
+    }
+
+    .brandsUsed{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 </style>

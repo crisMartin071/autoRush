@@ -9,11 +9,11 @@ const props = defineProps({
 
 <template>
     <div class="backgroundPicture">
-        <img :src="'../../public/img/'+ props.img">
+        <img :src="'../../public/img/'+ props.img" id="backgroundImage">
         <div class="overlay"></div>
         <div class="texto">
             <h1>{{ $t(props.title) }}</h1>
-            <p>- -</p>
+            <p>- {{ $t("slogan") }} -</p>
         </div>
     </div>
 </template>
@@ -23,7 +23,8 @@ const props = defineProps({
         position: relative;
     }
 
-    img{
+    #backgroundImage{
+        height: 100%;
         width: 100%;
     }
 
@@ -39,5 +40,10 @@ const props = defineProps({
         bottom: 6%;
         left: 5%;
         z-index: 2;
+    }
+
+    .backgroundPicture .texto h1{
+        font-size: 42px;
+        margin: 0px;
     }
 </style>

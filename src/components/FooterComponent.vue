@@ -4,9 +4,11 @@
 
 <template>
     <footer>
-        <img id="logo" src="../../public/img/autoRush (1).png">
+        <a href="/">
+            <img id="logo" src="../../public/img/autoRush (1).png">
+        </a>
         <div class="contentFooter">
-            <div>
+            <div class="section">
                 <h4>Mapa web</h4>
                 <ul>
                     <li>
@@ -15,24 +17,26 @@
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a href="/cars">
                             Catálogo
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a href="joinus">
                             Unete a nosotros
                         </a>
                     </li>
                 </ul>
             </div>
-            <div>
+            <div class="section">
                 <h4>Redes Sociales</h4>
-                <div>
-                    
+                <div class="socialMedias">
+                    <img src="../../public/img/instagram.png">
+                    <img src="../../public//img/social.png">
+                    <img src="../../public//img/facebook.png">
                 </div>
             </div>
-            <div>
+            <div class="section">
                 <h4>Ayuda</h4>
                 <ul class="helpInfo">
                     <li>Nº Teléfono: 123 45 67 89</li><br/>
@@ -45,9 +49,9 @@
         <div class="sponsors">
             <img src="../../public/img/audi.jpg">
             <img src="../../public/img/bmw.jpg">
-            <img src="../../public/img/">
-            <img src="../../public/img/">
-            <img src="../../public/img/">
+            <img src="../../public/img/porsche.jpg">
+            <img src="../../public/img/jaguar.jpg">
+            <img src="../../public/img/lexus.jpg">
         </div>
     </footer>
 </template>
@@ -60,7 +64,7 @@
         justify-content: space-around;
     }
 
-    .contentFooter div{
+    .section{
         width: 20%;
         text-align: center;
         display: flex;
@@ -84,11 +88,23 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        width: 80%;
     }
 
     .sponsors img{
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 110px;
     }
 
+    .socialMedias{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .socialMedias img{
+        width: 50px;
+        height: 50px;
+    }
 </style>

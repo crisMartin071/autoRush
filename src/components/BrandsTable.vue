@@ -35,7 +35,7 @@ onMounted(async () => {
                     :rows="rows"
                     :pagination-options="{
                         enabled: true,
-                        perPage: 10
+                        perPage: 5
                     }"
                     :search-options="{
                         enabled: true,
@@ -44,5 +44,8 @@ onMounted(async () => {
 </template>
 
 <style>
-
+    .vgt-inner-wrap {
+        border: 8px solid #ddd;
+        width: 100%;
+    }
 </style>

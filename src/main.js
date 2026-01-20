@@ -13,12 +13,14 @@ const i18n = createI18n({
         "es": {
             greet: "Bienvenido a AutoRush!",
             catalog: "Conoce nuestro catálogo",
-            adviser: "Unete a nosotros"
+            adviser: "Unete a nosotros",
+            slogan: "Conduce tu estilo, siente la excelencia"
         },
         "en": {
             greet: "Welcome to AutoRush!",
             catalog: "Know all of us catalog",
-            adviser: "Join us"
+            adviser: "Join us",
+            slogan: "Drive your style, feel the excellence"
         }
     }
 })
