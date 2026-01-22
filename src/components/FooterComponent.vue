@@ -9,27 +9,27 @@
         </a>
         <div class="contentFooter">
             <div class="section">
-                <h4>Mapa web</h4>
+                <h4>{{ $t("webMap") }}</h4>
                 <ul>
                     <li>
                         <a href="/">
-                            Inicio
+                            {{ $t("index") }}
                         </a>
                     </li>
                     <li>
                         <a href="/cars">
-                            Catálogo
+                            {{ $t("catalog") }}
                         </a>
                     </li>
                     <li>
                         <a href="joinus">
-                            Unete a nosotros
+                            {{ $t("joinUs") }}
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="section">
-                <h4>Redes Sociales</h4>
+                <h4>{{ $t("socialMedias") }}</h4>
                 <div class="socialMedias">
                     <img src="../../public/img/instagram.png">
                     <img src="../../public//img/social.png">
@@ -37,11 +37,11 @@
                 </div>
             </div>
             <div class="section">
-                <h4>Ayuda</h4>
+                <h4>{{ $t("help") }}</h4>
                 <ul class="helpInfo">
-                    <li>Nº Teléfono: 123 45 67 89</li><br/>
-                    <li>Correo electrónico: autoRush@gmail.com</li><br/>
-                    <li>Dirección: Rincón Bernardo, 04 - Daly City, Bal / 68860</li><br/>
+                    <li>{{ $t("helpTlf") }}: 123 45 67 89</li><br/>
+                    <li>{{ $t("helpEmail") }}: autoRush@gmail.com</li><br/>
+                    <li>{{ $t("address") }}: 1/2 Times Square</li><br/>
                 </ul>
             </div>
         </div>

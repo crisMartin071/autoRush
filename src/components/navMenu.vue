@@ -7,13 +7,13 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/">Inicio</a>
+                    <a href="/">{{ $t("index") }}</a>
                 </li>
                 <li>
-                    <a href="/cars">Catálogo</a>
+                    <a href="/cars">{{ $t("catalog") }}</a>
                 </li>
                 <li>
-                    <a href="/joinus">Unete a nosotros</a>
+                    <a href="/joinus">{{ $t("joinUs") }}</a>
                 </li>
             </ul>
         </nav>

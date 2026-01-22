@@ -1,29 +1,29 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
+import { useI18n } from "vue-i18n";
 
-const columns = [
-    {
-        label: "Posición",
-        field: "id"
+const { t } = useI18n();
+
+const columns = computed(() => [
+    { 
+        label: t("columnPosition"), field: "id" 
     },
-    {
-        label: "Nombre",
-        field: "name"
+    { 
+        label: t("columnName"), field: "name" 
     },
-    {
-        label: "Ventas",
-        field: "sells"
+    { 
+        label: t("columnSales"), field: "sells" 
     }
-];
+]);
 
 const rows = ref([]);
 
 onMounted(async () => {
-    try{
+    try {
         const data = await fetch("/brands.json");
-        if(!data.ok) throw new Error("Ha habido un error");
+        if (!data.ok) throw new Error("Ha habido un error");
         rows.value = await data.json();
-    }catch(error){
+    } catch (error) {
         console.log("Error al conectar con la API");
     }
 })
@@ -31,21 +31,18 @@ onMounted(async () => {
 </script>
 
 <template>
-    <vue-good-table :columns="columns" 
-                    :rows="rows"
-                    :pagination-options="{
-                        enabled: true,
-                        perPage: 5
-                    }"
-                    :search-options="{
+    <vue-good-table :columns="columns" :rows="rows" :pagination-options="{
+        enabled: true,
+        perPage: 5
+    }" :search-options="{
                         enabled: true,
                     }">
     </vue-good-table>
 </template>
 
 <style>
-    .vgt-inner-wrap {
-        border: 8px solid #ddd;
-        width: 100%;
-    }
+.vgt-inner-wrap {
+    border: 8px solid #ddd;
+    width: 800px;
+}
 </style>

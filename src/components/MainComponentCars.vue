@@ -16,10 +16,3 @@ const props = defineProps({
         <Cars></Cars>
     </main>
 </template>
-
-<style>
-    main{
-        display: flex;
-        flex-direction: column;
-    }
-</style>

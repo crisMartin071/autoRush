@@ -1,7 +1,8 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
 
 const cars = ref([]);
+const filter = ref();
 
 onMounted(async () => {
     try{
@@ -13,6 +14,26 @@ onMounted(async () => {
     }
 });
 
+const filterNoValid = computed(()=>{
+    if(!filter.value) return false;
+    const regex = /^[a-zA-Z0-9\s]+$/;
+    return !regex.test(filter.value);
+})
+
+const carsFiltered = computed(()=>{
+
+    if (!filter.value) {
+        return cars.value;
+    };
+
+    const search = filter.value.toLowerCase();
+
+    return cars.value.filter(car =>
+        car.name.toLowerCase().startsWith(search) ||
+        car.description.toLowerCase().startsWith(search)
+    );
+});
+
 </script>
 
 <template>
@@ -20,15 +41,16 @@ onMounted(async () => {
         <div id="filterDiv">
             <h1>Nuestros coches</h1>
             <form>
-                <input type="text" name="filter">
+                <input type="text" name="filter" v-model="filter">
+                <span class="errors" v-if="filterNoValid"> No se admiten caracteres especiales</span>
             </form>
         </div>
         <div class="cars">
-            <div class="card" v-for="car in cars" :key="car.id">
+            <div class="card" v-for="car in carsFiltered" :key="car.id">
                 <img src="../../public/img/bmw.jpg">
                 <div class="infoCard">
                     <h1>{{ car.name }}</h1>
-                    <p>{{ car.description }}</p>
+                    <p>{{ $t("cars."+car.name)}}</p>
                 </div>
             </div>
         </div>
