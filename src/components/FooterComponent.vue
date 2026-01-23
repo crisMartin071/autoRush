@@ -31,9 +31,15 @@
             <div class="section">
                 <h4>{{ $t("socialMedias") }}</h4>
                 <div class="socialMedias">
-                    <img src="../../public/img/instagram.png">
-                    <img src="../../public//img/social.png">
-                    <img src="../../public//img/facebook.png">
+                    <a href="https://www.instagram.com/">
+                        <img src="../../public/img/instagram.png">
+                    </a>
+                    <a href="https://www.linkedin.com/in/crist%C3%B3bal-mart%C3%ADn-markiewicz-b11177342/">
+                        <img src="../../public/img/social.png">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=es_ES">
+                        <img src="../../public/img/facebook.png">
+                    </a>
                 </div>
             </div>
             <div class="section">
@@ -41,7 +47,7 @@
                 <ul class="helpInfo">
                     <li>{{ $t("helpTlf") }}: 123 45 67 89</li><br/>
                     <li>{{ $t("helpEmail") }}: autoRush@gmail.com</li><br/>
-                    <li>{{ $t("address") }}: 1/2 Times Square</li><br/>
+                    <li>{{ $t("address") }}</li><br/>
                 </ul>
             </div>
         </div>

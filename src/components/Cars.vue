@@ -47,7 +47,7 @@ const carsFiltered = computed(()=>{
         </div>
         <div class="cars">
             <div class="card" v-for="car in carsFiltered" :key="car.id">
-                <img src="../../public/img/bmw.jpg">
+                <img :src="'../../public/img/'+ car.img">
                 <div class="infoCard">
                     <h1>{{ car.name }}</h1>
                     <p>{{ $t("cars."+car.name)}}</p>
@@ -81,7 +81,7 @@ const carsFiltered = computed(()=>{
 
     .card{
         width: 200px;
-        height: 300px;
+        height: 305px;
         background-color: white;
         margin: 8px;
         border-radius: 8px;

@@ -3,6 +3,8 @@ import InitialBox from './InitialBox.vue';
 import NavMenu from './navMenu.vue';
 import { useForm, useField } from "vee-validate";
 import { Bar } from 'vue-chartjs';
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import {
     Chart as ChartJS,
     Title,
@@ -13,29 +15,31 @@ import {
     LinearScale
 } from 'chart.js';
 
+const { t } = useI18n();
+
 const schema = {
     name(value) {
-        if (!value) return "Nombre requerido";
-        if (value.length < 3 || value.length > 21) return "Longitud debe de ser entre 3 y 20 carácteres";
+        if (!value) return t("nameRequired");
+        if (value.length < 3 || value.length > 21) return t("lengthInput");
         return true;
     },
     password(value) {
-        if (!value) return "Contraseña requerida";
-        if (value.length < 3 || value.length > 21) return "Longitud debe de ser entre 3 y 20 carácteres";
+        if (!value) return t("passwordRequired");
+        if (value.length < 3 || value.length > 21) return t("lengthInput");
         return true;
     },
     confirmPassword(value) {
-        if (!value) return "Campo requerido";
-        if (value.length < 3 || value.length > 21) return "Longitud debe de ser entre 3 y 20 carácteres";
+        if (!value) return t("confirmPasswordRequired");
+        if (value.length < 3 || value.length > 21) return t("lengthInput");
         return true;
     },
     dni(value) {
-        if (!value) return "DNI requerido";
-        if (value.length != 9) return "DNI no valido";
+        if (!value) return t("dniRequired");
+        if (value.length != 9) return t("dniRequired");
         return true;
     },
     email(value) {
-        if (!value) return "Debes de introducir un email";
+        if (!value) return t("emailRequired");
         return true;
     }
 };
@@ -67,16 +71,22 @@ ChartJS.register(
     LinearScale
 );
 
-const chartData = {
-    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'],
-    datasets: [
-        {
-            label: 'Usuarios',
-            data: [10, 20, 30, 40, 50,],
-            backgroundColor: '#42b983'
-        }
-    ]
-};
+const chartData = computed(() => ({
+  labels: [
+    t("january"),
+    t("february"),
+    t("march"),
+    t("april"),
+    t("may")
+  ],
+  datasets: [
+    {
+      label: t("users"),
+      data: [10, 20, 30, 40, 50],
+      backgroundColor: '#42b983'
+    }
+  ]
+}));
 
 const chartOptions = {
     responsive: true,
@@ -92,39 +102,39 @@ const chartOptions = {
         <div class="content">
             <div id="formBox">
             <div class="infoForm">
-                <h1>Crea una cuenta</h1>
-                <p>Inscribete para poder recibir notificaciones</p>
+                <h1>{{ $t("createAccount") }}</h1>
+                <p>{{ $t("signUpInfo") }}</p>
             </div>
             <div class="form">
                 <form @submit.prevent="onSubmit">
-                    <label>Nombre:</label>
+                    <label>{{ $t("nameLabel") }}</label>
                     <input type="text" v-model="name">
                     <span class="errors">{{ errors.name }}</span>
-                    <label>Contraseña:</label>
+                    <label>{{ $t("passwordLabel") }}</label>
                     <input type="password" v-model="password">
                     <span class="errors">{{ errors.password }}</span>
-                    <label>Confirmar contraseña:</label>
+                    <label>{{ $t("confirmPasswordLabel") }}</label>
                     <input type="password" v-model="confirmPassword">
                     <span class="errors">{{ errors.confirmPassword }}</span>
-                    <label>Email:</label>
+                    <label>{{ $t("emailLabel") }}</label>
                     <input type="email" v-model="email">
                     <span class="errors">{{ errors.email }}</span>
                     <div>
-                        <label>DNI:</label>
+                        <label>{{ $t("dniLabel") }}</label>
                         <input type="text" v-model="dni">
                         <span class="errors">{{ errors.dni }}</span>
-                        <label>Tlf:</label>
+                        <label>{{ $t("phoneLabel") }}</label>
                         <input type="text">
                     </div>
                     <div>
-                        <input type="submit" value="Enviar" class="btn">
+                        <input type="submit" :value="t('btnSend')" class="btn">
                     </div>
                 </form>
             </div>
         </div>
         <div class="graphic">
-            <h1>Las estadísticas nos avalan</h1>
-            <p>- Cada mes incrementamos el numero de clientes en miles -</p>
+            <h1>{{ $t("statsInfo") }}</h1>
+            <p>- {{ $t("statsSubtitle") }} -</p>
             <br/>
             <div>
                 <Bar :data="chartData" :options="chartOptions" />
