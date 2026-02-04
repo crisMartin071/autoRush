@@ -4,7 +4,7 @@ import Cars from "../views/Cars.vue";
 import Formulary from "../views/Formulary.vue";
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory("#"),
     routes: [
         {
             path: "/",

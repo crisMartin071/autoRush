@@ -1,17 +1,5 @@
-# AutoRush
-This is an educational project where I've been practicing with Vue 3. <br/>
-There are not comercial goals with this project and any images used are for educational purposes. <br/>
-If you are interested in seeing my project, there's a link in the description of this project.
+# Vue 3 + Vite
 
-### Purpose
-This project comes from an educational activity. The main purpose was put Vue knowledge into practice <br/>
-in this project with few functions such as translate function, show data in stream with AJAX or make <br/>
-charts with data of a JSON. In this case the project was focused in make a web site of an second-hand <br/>
-car business.
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-### Technologies
-- Vue
-- JavaScript
-- HTML
-- CSS
-Also it use some libraries which are indicated in the project.
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
