@@ -237,4 +237,24 @@ form div{
     color: red;
 }
 
+@media (max-width: 630px) {
+    .graphic{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 40%;
+        width: 80%;
+    }
+
+    .form form{
+        width: 95%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px;
+        padding: 5px;
+    }
+}
+
 </style>

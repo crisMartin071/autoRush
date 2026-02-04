@@ -28,6 +28,8 @@
         top: 120px;
         z-index: 2;
         border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+        margin-left: -15px;
         
     }
 

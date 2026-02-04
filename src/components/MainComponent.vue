@@ -64,52 +64,57 @@ const props = defineProps({
         border-radius: 8px;
     }
 
-    .joinUsBox{
+    .joinUsBox {
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 80%;
-        padding-left: 125px;
+        height: 500px;
         margin-top: 100px;
         position: relative;
     }
 
-    .joinUsBox img{
-        width: 500px;
-        height: 500px;
+    .joinUsBox img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    .joinUsBox #overlayJoinUs{
+    .joinUsBox #img1 {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .joinUsBox #img2 {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .joinUsBox #overlayJoinUs {
         position: absolute;
         inset: 0;
         background-color: rgba(0, 0, 0, 0.5);
-        top: 0;
-        left: 11.3%;
-        width: 1000px;
-        height: 100%;
         border-radius: 8px;
+        z-index: 1;
     }
 
-    .joinUsBox #img1{
-       border-top-left-radius: 8px;
-       border-bottom-left-radius: 8px;
-    }
-
-    .joinUsBox #img2{
-       border-top-right-radius: 8px;
-       border-bottom-right-radius: 8px;
+    .joinUsBox a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
     }
 
     .joinUsBox button {
         background-color: white;
         color: black;
-        position: absolute;
-        bottom: 48%;
-        left: 49%;
-        z-index: 2;
         border-radius: 4px;
         height: 50px;
         width: 150px;
         font-size: 15px;
+        border: none;
+        cursor: pointer;
     }
 
     .brandsUsed{
@@ -117,6 +122,50 @@ const props = defineProps({
         flex-direction: column;
         align-items: center;
         width: 100%;
+    }
+
+    @media (max-width: 1100px) {
+        #presentationBox{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 90%;
+            margin-top: 80px;
+            gap: 100px;
+            padding-left: 50px;
+            margin-bottom: 100px;
+        }
+        
+        #presentationBox img{
+            width: 300px;
+            height: 200px;
+            border-radius: 8px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        #presentationBox{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 90%;
+            margin-top: 80px;
+            gap: 100px;
+            padding-left: 50px;
+            margin-bottom: 100px;
+        }
+        
+        #presentationBox img{
+            display: none;
+        }
+    }
+
+    @media (max-width: 400px) {
+        #presentationBox p{
+            font-size: 14px;
+            width: 320px;
+            text-align: justify;
+        }
     }
     
 </style>

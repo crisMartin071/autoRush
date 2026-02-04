@@ -68,6 +68,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     .section{
@@ -95,6 +96,7 @@
         flex-direction: row;
         justify-content: space-around;
         width: 80%;
+        flex-wrap: wrap;
     }
 
     .sponsors img{
@@ -113,4 +115,24 @@
         width: 50px;
         height: 50px;
     }
+
+    @media (max-width: 430px) {
+        .section{
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section li{
+            width: 50%;
+        }
+    }
+
 </style>

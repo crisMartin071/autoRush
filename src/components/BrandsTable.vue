@@ -41,8 +41,15 @@ onMounted(async () => {
 </template>
 
 <style>
-.vgt-inner-wrap {
-    border: 8px solid #ddd;
-    width: 800px;
-}
+    .vgt-inner-wrap {
+        border: 8px solid #ddd;
+        width: 800px;
+    }
+
+    @media (max-width: 1100px) {
+        .vgt-inner-wrap {
+            border: 8px solid #ddd;
+            width:95%;
+        }
+    }
 </style>
