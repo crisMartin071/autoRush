@@ -1,10 +1,10 @@
-import { createRouter, createWebHasHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from "../views/Home.vue";
 import Cars from "../views/Cars.vue";
 import Formulary from "../views/Formulary.vue";
 
 const router = createRouter({
-    history: createWebHasHistory(),
+    history: createWebHashHistory(),
     routes: [
         {
             path: "/",
