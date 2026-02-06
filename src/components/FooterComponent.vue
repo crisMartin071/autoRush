@@ -12,19 +12,13 @@
                 <h4>{{ $t("webMap") }}</h4>
                 <ul>
                     <li>
-                        <a href="/">
-                            {{ $t("index") }}
-                        </a>
+                        <router-link to="/">{{ $t("index") }}</router-link>
                     </li>
                     <li>
-                        <a href="/cars">
-                            {{ $t("catalog") }}
-                        </a>
+                        <router-link to="/cars">{{ $t("catalog") }}</router-link>
                     </li>
                     <li>
-                        <a href="joinus">
-                            {{ $t("joinUs") }}
-                        </a>
+                        <router-link to="/joinus">{{ $t("joinUs") }}</router-link>
                     </li>
                 </ul>
             </div>

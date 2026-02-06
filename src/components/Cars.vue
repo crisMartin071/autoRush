@@ -6,7 +6,7 @@ const filter = ref();
 
 onMounted(async () => {
     try{
-        const response = await fetch("/data.json");
+        const response = await fetch("/autoRush/data.json");
         if(!response.ok) throw new Error("Error al responder");
         cars.value = await response.json();
     }catch(error){
@@ -47,7 +47,7 @@ const carsFiltered = computed(()=>{
         </div>
         <div class="cars">
             <div class="card" v-for="car in carsFiltered" :key="car.id">
-                <img :src="'../../public/img/'+ car.img">
+                <img :src="'/autoRush/img/'+ car.img">
                 <div class="infoCard">
                     <h1>{{ car.name }}</h1>
                     <p>{{ $t("cars."+car.name)}}</p>

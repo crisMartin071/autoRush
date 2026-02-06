@@ -20,7 +20,7 @@ const rows = ref([]);
 
 onMounted(async () => {
     try {
-        const data = await fetch("/brands.json");
+        const data = await fetch("/autoRush/brands.json");
         if (!data.ok) throw new Error("Ha habido un error");
         rows.value = await data.json();
     } catch (error) {
