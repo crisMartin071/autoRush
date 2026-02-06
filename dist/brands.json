@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Audi",
+    "sells": 1773
+  },
+  {
+    "id": 2,
+    "name": "BMW",
+    "sells": 2101
+  },
+  {
+    "id": 3,
+    "name": "Mercedes-Benz",
+    "sells": 2064
+  },
+  {
+    "id": 4,
+    "name": "Lexus",
+    "sells": 556
+  },
+  {
+    "id": 5,
+    "name": "Acura",
+    "sells": 159
+  },
+  {
+    "id": 6,
+    "name": "Genesis",
+    "sells": 208
+  },
+  {
+    "id": 7,
+    "name": "Volvo",
+    "sells": 750
+  },
+  {
+    "id": 8,
+    "name": "Jaguar",
+    "sells": 58
+  },
+  {
+    "id": 9,
+    "name": "Infiniti",
+    "sells": 78
+  },
+  {
+    "id": 10,
+    "name": "Alfa Romeo",
+    "sells": 69
+  },
+  {
+    "id": 11,
+    "name": "Cadillac",
+    "sells": 350
+  },
+  {
+    "id": 12,
+    "name": "Lincoln",
+    "sells": 163
+  },
+  {
+    "id": 13,
+    "name": "Buick",
+    "sells": 703
+  },
+  {
+    "id": 14,
+    "name": "Land Rover",
+    "sells": 267
+  },
+  {
+    "id": 15,
+    "name": "Porsche",
+    "sells": 233
+  },
+  {
+    "id": 16,
+    "name": "DS Automobiles",
+    "sells": 55
+  },
+  {
+    "id": 17,
+    "name": "Polestar",
+    "sells": 54
+  },
+  {
+    "id": 18,
+    "name": "Cupra",
+    "sells": 500
+  },
+  {
+    "id": 19,
+    "name": "Seat",
+    "sells": 500
+  },
+  {
+    "id": 20,
+    "name": "Mini",
+    "sells": 268
+  }
+]
